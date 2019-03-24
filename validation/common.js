@@ -7,7 +7,7 @@ const isValidDate = (dateString) => {
   if (!/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString)) {
     return false;
   }
-
+  
   const parts = dateString.split('-');
   const day = parseInt(parts[2], 10);
   const month = parseInt(parts[1], 10);

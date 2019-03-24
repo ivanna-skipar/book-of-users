@@ -3,6 +3,8 @@ const express = require('express'),
 
 const users = require('./routes/users');
 const services = require('./routes/services');
+const usersMySQL = require('./routes/usersMySQL');
+const servicesMySQL = require('./routes/servicesMySQL');
 
 const app = express();
 
@@ -11,6 +13,8 @@ app.use(bodyParser.json());
 
 app.use('/users', users);
 app.use('/services', services);
+app.use('/usersMySQL', usersMySQL);
+app.use('/servicesMySQL', servicesMySQL);
 
 const PORT = 5000;
 

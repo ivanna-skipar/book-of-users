@@ -1,5 +1,5 @@
 const { isEmpty } = require('./common');
-const UserEnum = require('../enums/user').default;
+const UserEnum = require('../enums/user');
 const { ValidationError } = require('../errors/Errors');
 
 module.exports = function validateRegisterInput(data) {

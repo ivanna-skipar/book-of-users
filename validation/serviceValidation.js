@@ -1,5 +1,6 @@
 const { isEmpty } = require('./common');
-const ServiceEnum = require('../enums/service').default;
+const { isValidDate } = require('./common');
+const ServiceEnum = require('../enums/service');
 const { ValidationError } = require('../errors/Errors');
 
 module.exports = function validateRegisterInput(data) {
@@ -23,7 +24,7 @@ module.exports = function validateRegisterInput(data) {
 
   if (!isEmpty(data.time)) {
     if (!isValidDate(data.time)) {
-      errors.time = ServiceEnum.errors.timeIncorrect;
+      errors.time = ServiceEnum.error.timeIncorrect;
     }
   }
   
